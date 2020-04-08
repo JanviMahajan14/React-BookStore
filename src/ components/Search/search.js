@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
 import './search.css';
 
-const Search = () => {
+const Search = ({handleSearch, searchBook}) => {
     return(
         <div className="searchArea">
-            <form>
-                <input type="text" />
+            <form onSubmit={searchBook}>
+                <input type="text" onChange={handleSearch}/>
                 <button type="submit">Search</button>
             </form>
         </div>
