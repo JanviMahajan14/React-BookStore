@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Search from '../Search/search';
+import BookList from '../BookList/booklist';
 import axios from 'axios';
 
 class Books extends Component {
@@ -29,6 +30,7 @@ class Books extends Component {
         return(
             <div>
             <Search handleSearch={this.handleSearch} searchBook={this.searchBook}/>
+            <BookList books={this.state.books}/>
             </div>
         )
     }
